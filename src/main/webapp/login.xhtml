@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+   
+       
+        <ui:composition template="newTemplate.xhtml">
+           
+            <ui:define name="content">
+                   <!-- 
+                        Carga horaria calcula automaticamente de acordo com as turmas
+                        <h:outputText value="Nome: " />
+                        <h:inputText value="{cadProfessor.professor.nome}"/>
+                        --> 
+                <h:form id="tst">
+                    
+                    <h:outputText value="Login" style="font-size: 18pt; font-weight: bold; text-align: center"/>
+                    <br/>
+                    <br/>
+                    <h:panelGrid columns="2" style="padding-left: 20px; align-items: center" >                       
+                        <h:outputText value="Login: " class="labels"/>
+                        <h:inputText value="#{loginBean.login}"/>
+                        <h:outputText value="CPF: " class="labels"/>
+                        <h:inputSecret value="#{loginBean.senha}" />
+                        
+                    </h:panelGrid>
+                    <h:panelGrid columns="2">
+                        
+                    <h:commandButton value="Voltar" action="index"/>
+                    <h:commandButton value="Cadastrar"  action="#{loginBean.verificar}"/>
+                    </h:panelGrid>
+                    
+                 
+                    
+                </h:form>
+                
+            </ui:define>
+            
+            <ui:define name="bottom">
+                <p style="text-align: center;">Copyright &copy; 2018 - by Antonio Bento, Kyllder Rocha, Luana Cavalcante e Thiago Hortencio</p>
+            </ui:define>
+        </ui:composition>
+</html>
+
