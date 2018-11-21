@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="./css/default.css"/>
+        <h:outputStylesheet name="./css/cssLayout.css"/>
+        <h:outputStylesheet library="css" name="estilo.css"/>
+      
+        <title>Facelets Template</title>
+    </h:head>
+
+    <h:body>
+
+        <header id="top">
+            <ui:insert name="top"><h1 style="color: white; text-align: center; font-weight: bolder; font-size: 28pt; padding-bottom: 60px; padding-top: 60px">SISTEMA ACADÊMICO</h1></ui:insert>
+        </header>
+
+        <div id="content" class="center_content">
+            <ui:insert name="content">Content</ui:insert>
+        </div>
+
+        <footer id="bottom">
+            <ui:insert name="bottom"><p style="text-align: center;">Copyright &copy; 2018 - by Antonio Bento, Kyllder Rocha, Luana Cavalcante e Thiago Hortencio</p></ui:insert>
+        </footer>
+
+    </h:body>
+
+</html>
